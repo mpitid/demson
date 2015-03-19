@@ -1,0 +1,5 @@
+#!/bin/bash
+
+[[ -z $@ ]] && { echo "usage: $(basename $0) <file.dem> [.. file.dem]"; exit 1; }
+
+erl -pa dep/erlang_protobuf/ebin -pa ebin -noshell -run demo main $@
